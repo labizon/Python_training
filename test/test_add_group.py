@@ -13,13 +13,13 @@ def app(request):
 
 def test_add_group(app):  # -- Тестовый метод, принимающий fixture в качестве параметра и вызывающий
                           # -- в ней вспомагательные методы  --
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
     app.create_group(Group(name="Test", header="test", footer="test"))
-    app.logout()
+    app.session.logout()
 
 
 def test_add_empty_group(app):  # -- Тестовый метод, принимающий fixture в качестве параметра и вызывающий
                                 # -- в ней вспомагательные методы  --
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
     app.create_group(Group(name="", header="", footer=""))
-    app.logout()
+    app.session.logout()
