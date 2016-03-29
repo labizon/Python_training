@@ -1,5 +1,5 @@
 
-class Group:
+class Group:  # -- Модель предметной области --
 
     def __init__(self, name, header, footer):
         self.name = name
