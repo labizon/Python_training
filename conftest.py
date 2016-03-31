@@ -8,10 +8,10 @@ fixture = None
 def app(request):
     global fixture
     if fixture is None:
-        fixture = Application() # -- Инициализация.  Создание fixture --
+        fixture = Application()
     else:
         if not fixture.is_valid():
-            fixture = Application()  # -- Инициализация.  Создание fixture --
+            fixture = Application()
     fixture.session.ensure_login(username="admin", password="secret")
     return fixture
 

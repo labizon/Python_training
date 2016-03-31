@@ -3,7 +3,7 @@ from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 
 
-class Application:  # --  Класс, содержащий все вспомагательные методы  --
+class Application:
 
     def __init__(self):
         self.wd = WebDriver()
